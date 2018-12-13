@@ -9,7 +9,7 @@ import java.util.*
 class LiveDataTimerViewModel : ViewModel() {
 
     companion object {
-        private val ONE_SECOND = 1000
+        private val ONE_SECOND = 1000.toLong()
     }
 
     private val initialTime: Long = SystemClock.elapsedRealtime()
@@ -26,6 +26,6 @@ class LiveDataTimerViewModel : ViewModel() {
                 //TODO post the new value with LiveData.postValue()
                 elapsedTime.postValue(newValue)
             }
-        }, ONE_SECOND.toLong(), ONE_SECOND.toLong())
+        }, ONE_SECOND, ONE_SECOND)
     }
 }
