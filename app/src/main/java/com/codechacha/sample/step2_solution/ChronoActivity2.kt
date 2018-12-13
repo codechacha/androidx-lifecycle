@@ -6,15 +6,16 @@ import android.os.SystemClock
 import android.util.Log
 import androidx.lifecycle.ViewModelProviders
 import com.codechacha.sample.R
-import kotlinx.android.synthetic.main.activity_chrono_1.*
+import kotlinx.android.synthetic.main.activity_chrono_2.*
 
 class ChronoActivity2 : AppCompatActivity() {
-
-    val TAG = "ChronoActivity2"
+    companion object {
+        const val TAG = "ChronoActivity2"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chrono_1)
+        setContentView(R.layout.activity_chrono_2)
 
         // The ViewModelStore provides a new ViewModel or one previously created.
         val chronometerViewModel = ViewModelProviders.of(this).get(ChronometerViewModel::class.java)

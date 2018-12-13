@@ -6,9 +6,7 @@ import androidx.lifecycle.ViewModel
 
 class ChronometerViewModel : ViewModel() {
 
-    @Nullable
-    @get:Nullable
-    var startTime: Long? = null
+    var startTime: Long? = 0
         private set
 
     fun setStartTime(startTime: Long) {

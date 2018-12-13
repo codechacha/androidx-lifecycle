@@ -9,7 +9,9 @@ import androidx.lifecycle.OnLifecycleEvent
 
 
 class MyObserver(private val lifeCycle: Lifecycle) : LifecycleObserver {
-    private val TAG = "MyObserver"
+    companion object {
+        const val TAG = "MyObserver"
+    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreated(source: LifecycleOwner) {
@@ -55,6 +57,4 @@ class MyObserver(private val lifeCycle: Lifecycle) : LifecycleObserver {
     fun onDestroy() {
         Log.d(TAG, "onDestroy")
     }
-
-
 }
